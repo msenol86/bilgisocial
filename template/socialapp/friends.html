@@ -1,0 +1,20 @@
+{% extends "socialapp/base.html" %}
+{% block content %}
+    <ul>
+    <li><h2>Favoriler</h2></li>
+    {% for friend in friend_list %}
+        <li><a href="/profile/{{ friend.user.pk }}">{{ friend.user.get_full_name }}</a>
+             - <a href="/remove_friend/{{ friend.user.pk }}">Listeden Çıkar</a>
+        </li>
+    {% endfor %}
+    </ul>
+
+    <ul>
+        <li><h2>Engelliler</h2></li>
+    {% for blocked_user in blocked_list %}
+        <li><a href="/profile/{{ blocked_user.user.pk }}">{{ blocked_user.user.get_full_name }}</a>
+             - <a href="/unblock_user/{{ blocked_user.pk }}">Engellemeyi Kaldır</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock content %}

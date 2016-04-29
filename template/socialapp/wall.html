@@ -1,0 +1,26 @@
+{% extends "socialapp/base.html" %}
+{% block content %}
+    <div class="btn btn-default-group">
+        {% for number in number_of_pages %}
+            {% if current_page == number %}
+                <a href="/{{ number }}">
+                    <button class="btn btn-default disabled">{{ number }}</button>
+                </a>
+            {% else %}
+                <a href="/{{ number }}">
+                    <button class="btn btn-default">{{ number }}</button>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="btn btn-default-group pull-right">
+        <a href="/manage_post/">
+            <button class="btn btn-default">Duyuru Ekle +</button>
+        </a>
+    </div>
+    <ul>
+        {% for post in posts %}
+            <li><a href="/posts/{{ post.id }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

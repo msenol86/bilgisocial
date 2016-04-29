@@ -1,0 +1,24 @@
+{% extends "socialapp/base.html" %}
+{% block content %}
+    <dl class="dl-horizontal">
+        {% if old_messages %}
+            <div class="text-center"><a href="/messages/{{ conversation_id }}/{{ page_number }}">Önceki Mesajlar</a></div>
+            <br />
+        {% endif %}
+        {% for message in message_list.reverse %}
+            <dt><a href="/profile/{{ message.sender_user.pk }}">{{ message.sender_user.get_full_name }}</a></dt>
+            <dd>
+                <div class="pull-left" style="width: 75%">{{ message }}</div>
+                <div class="pull-left" style="width: 25%">{{ message.sent_time }}</div>
+            </dd>
+            <hr style="clear:both; height: 3px; margin: 2px;"/>
+        {% endfor %}
+    </dl>
+    <form action="/messages/send/" method="POST">
+        {% csrf_token %}
+        <textarea name="content"></textarea>
+        <input type="hidden" name="receiver_user" value="{{ interlocutor }}"/>
+        <input type="hidden" name="conversation_id" value="{{ conversation_id }}"/>
+        <input type="submit" value="Gönder"/>
+    </form>
+{% endblock content %}

@@ -1,0 +1,35 @@
+{% extends "socialapp/base.html" %}
+{% block content %}
+    <table class="profile">
+        <tbody>
+        <tr>
+            <td class="picture">
+                <a href="/photos/{{ user_profile.user.pk }}"><img
+                        src="{{ MEDIA_URL }}{{ user_profile.picture }}"/></a>
+                {% if other_user %}
+                    <br/><a href="/start_conversation/{{ user_profile.user.pk }}" class="btn btn-default">Mesaj Gönder</a><br/>
+                    {% if user_profile not in active_user.get_profile.friends.all %}
+                        <a href="/add_friend/{{ user_profile.user.pk }}" class="btn btn-default">Listeme Ekle</a><br/>
+                    {% else %}
+                        <a href="/remove_friend/{{ user_profile.user.pk }}" class="btn btn-default">Listemden Çıkar</a><br/>
+                    {% endif %}
+                    {% if user_profile not in active_user.get_profile.blocked_users.all %}
+                        <a href="/block_user/{{ user_profile.pk }}" class="btn btn-default">Engelle</a><br/>
+                    {% else %}
+                        <a href="/unblock_user/{{ user_profile.pk }}" class="btn btn-default">Engeli Kaldır</a><br/>
+                    {% endif %}
+                {% else %}
+                    <br />
+                    <a href="/add_photo" class="btn btn-default">Fotoğraf Ekle</a>
+                    <br />
+                    <a href="/edit_user_profile/" class="btn btn-default">Profili Düzenle</a>
+                {% endif %}
+            </td>
+            <td><h4><strong>{{ user_profile.user.get_full_name }}</strong></h4>
+
+                <br/>{{ user_profile.university }} - {{ user_profile.department }}
+                <br/>{{ user_profile.birth_date|date:"SHORT_DATE_FORMAT" }}<br/><br/>{{ user_profile.about }}</td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock content %}

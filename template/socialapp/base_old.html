@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ STATIC_URL }}style.css" type="text/css" />
+    <title>{% block title %}My amazing site{% endblock %}</title>
+</head>
+
+<body>
+<div id="wrapper">
+    <div id="top_menu">
+        {% block top_menu %}
+            <div id="logo">
+                <a href="/">Bilgi-Social</a>
+            </div>
+            <ul class="horizontal-list">
+                <li><a href="/profile/">My Profile</a></li>
+                <li><a href="/messages/">Messages{% if notifications.message_count > 0 %}
+                        ({{ notifications.message_count }}){%  endif %}</a></li>
+                <li><a href="/looks/">Looks{% if notifications.look_count > 0 %}
+                        ({{ notifications.look_count }}){%  endif %}</a></li>
+                <li><a href="/friends/">Friends</a></li>
+                <li><a href="/search/">Search</a></li>
+                <li>{% if logged_in %}<a href="/logout/">Oturumu kapat</a>
+                    {% else %}<a href="/login?next{{ request.past }}">Oturum aç</a></li>
+                    <li><a href="/signup/">Üye ol</a>
+                {% endif %}</li>
+            </ul>
+        {% endblock %}
+    </div>
+    <br />
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+    <div id="feedback"><a href="/feedback/?next={{ request.path }}">Geri bildirim</a></div>
+</div>
+</body>
+</html>

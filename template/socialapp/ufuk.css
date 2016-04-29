@@ -1,0 +1,339 @@
+/* === [ RESET CSS ] === */
+
+#navigation { background: url("/images/uygulama/menuBg.jpg") repeat-x scroll 0 0; float: left; height: 48px; width: 925px; padding-left: 35px;}
+#navigation ul li {font:16px/18px Arial; color:#fff; float:left;margin-top: 14px; display: inline; padding-right: 35px;}
+#navigation ul li a{font:16px/18px Arial; color:#fff; text-decoration:none;}
+#navigation ul li a:hover{font:16px/18px Arial; color:#0d5786 !important; text-decoration:none;}
+.clear {clear:both; height:1px; display:block; color:#fff;text-indent:- 999999;}
+caption, th, {text-align:left;}
+h1, h2, h3, h4, h5, h6 { font:bold 12px/30px arial; }
+abbr, acronym { border:0; }
+table { border-collapse:collapse; border-spacing:0; font-family: "Lucida Grande", Arial, sans-serif; font-size:12px;}
+.IcerikMenuDiv a{width:198px;display:block}
+#CollapsiblePanel2 ul li { width:20%; float:left; border: 1px solid #d6d6d6; margin: 0  10px 10px 0;}
+#CollapsiblePanel2 ul li a { font:10px/18px Arial; color:#666; text-decoration:none; margin: 5px 0 15px 10px; }
+ol, ul, li {}
+.TabbedPanels li{}
+body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {margin:0;padding:0;}
+body {background: url("/images/uygulama/bg.jpg") repeat-x scroll 0 0 #FFFFFF;
+    width: 100%;}
+fieldset, img { border:0; }
+address, caption, cite, code, dfn, em, th, var { font-style:normal; font-weight:normal; }
+q:before, q:after { content:''; }
+a:hover {color:#000 !important;}
+.UrunBilgisiKategorilerTablo {margin: 10px 0 20px 10px;}
+#ReklamAramaFormuDiv {  float: right;
+    margin-right: 33px;
+    margin-top: -38px;
+    position: relative;}
+.InputStyle2 {width: 129px;background: url('/images/uygulama/textbox.png') no-repeat;border: none;height: 30px;float:left;padding-left:10px; font: 11px/30px Arial; color:#999}
+.ara {margin:0;padding:0;float:left}
+/* ========== [ UYGULAMA CSS ] ========== */
+
+.AnaTablo { width:100%; }
+.SiteUstTablo { width: 960px; text-align:left; }
+.OrtaAlanTablo  { width: 960px; text-align:left; background: #fff;}
+.SiteAltTablo { width:100%; text-align:left; }
+.AnaTabloAltTd { }
+.AnaTabloUstTd { }
+.OrtaAlanTabloOrtaTd { width:100%; }
+.IcerikOrtaTablo { width:100%;   margin-bottom: 20px !important;}
+.IcerikOrtaTabloIcerikTd td { padding: 0 5px; }
+.IcerikOrtaTabloBaslikTd h2 { padding-left:10px !important; }
+.IcerikOrtaTablo h2 { font:bold 14px/45px arial; color:#333; border-bottom: 1px solid #DDDDDD; padding:0px }
+.IcerikOrtaTablo a { color:#333; font-weight:bold; font-size: 14px;}
+#UrunBilgisiUrunSecenekleriDiv {margin:25px 0 15px -10px}
+.UrunSecenekTabloBaslikTd {font:bold 12px/18px Arial}
+.UrunSecenekTabloSecenekAdi {color:#8560a9;font:bold 12px/18px Arial}
+.UrunSecenekTabloSelectBox {padding:5px;border-radius:5px; border:1px solid #999}
+.UrunBilgisiDigerUrunlerTumuLink {display:block}
+.MusteriHizmetleriIcerikTr { width:90%; margin:10px 0; }
+.MusteriHizmetleriIcerikTr p { margin-lefT:10px; }
+.GenelModulTablo { width: 215px; margin: 12px 8px 15px 3px;}
+.GenelModulBaslikTd, .IndirimliUrunlerBaslikTd, .EnCokSatanlarBaslikTd { font:bold 13px/30px Helvetica, Arial, sans-serif; padding: 0px 0px 0 30px !important; background: url('/images/uygulama/encokSatan.jpg') no-repeat; color: white !important; border: none !important; height: 30px !important;}
+.YeniUrunlerBaslikTd {background: url('/images/uygulama/yeniUrunBaslik.jpg') no-repeat;}
+.YanKategoriMenuBaslikTd { font:bold 14px/30px arial; padding: 0px 0px 0 30px !important; background: url('/images/uygulama/solBg.jpg') no-repeat; color: #288db5 !important; height: 40px !important;}
+.YanKategoriMenuTablo img{display:none}
+.YanKategoriMenuAnaListeTd {background: url('/images/uygulama/solBg.jpg') no-repeat; height: 40px !important;padding-left: 0 !important;}
+.YanKategoriMenuListeTd1 {
+background-color:#f5f4f5; border-top:1px solid #dadada; border-right:1px solid #dadada;border-left:1px solid #dadada;
+
+width: 215px;
+}
+.YanKategoriMenuAnaListeTd a {color: #288db5 !important; font:bold 12px/37px arial !important;padding:0 0 0 30px !important;}
+.IndirimliUrunlerBaslikLink, .YeniUrunlerBaslikLink, .EnCokSatanlarBaslikLink{color:#fff !important}
+.YeniUrunlerListeTd, .IndirimliUrunlerListeTd {background:#eee;border-top:1px dashed #fff}
+.GenelModulListeTd  {padding-left:10px}
+.GenelModulListeTd  img {display:none}
+.GenelModulBaslikTd a { color: #fff; font:bold 13px/30px Tahoma, Geneva, sans-serif !important; }
+.GenelModulTablo td{ height:auto;  }
+.YanKategoriMenuListeTd { background: url('/images/uygulama/solBg.jpg') no-repeat; background-position: center; height: 40px !important;padding-left: 30px !important;width: 215px;}
+.YanKategoriMenuListeTd a{color:#288db5 !important; font-size: 14px !important; }
+.EnCokSatanlarListeTd { border-bottom: 1px dashed #DDD !important; }
+.EnCokSatanlarTablo { border-top: 1px dashed #DDD !important; }
+.GenelModulTablo ul { border-top:1px solid #ddd; list-style: none; }
+.IcerikMenuTablo td { border-bottom:none; }
+.GenelModulTablo td a { font-size:11px; font-family: Arial, sans-serif; color:#333; text-decoration:none; display:block; float:left; }
+.GenelModulTablo td a:hover { text-decoration:underline; color:#000; }
+#ajax_menu ul { border-top:none; }
+.GenelFormTablo { width:100%; }
+.GenelFormTablo td { padding:5px 10px; }
+.SepetimToplamTabloKdvDahilToplamDegerTd {font:bold 16px/18px Arial; color:#ee0606}
+.GenelBilgiDiv, .GenelYardimDiv, .GenelUyariDiv { border:1px solid #ddd; padding:10px; margin:10px 0; color:#666; }
+.GenelBilgiDiv h2, .GenelYardimDiv h2, .GenelUyariDiv h2 { border-bottom:1px solid #ddd; font:bold 12px/30px arial; padding:0 10px; }
+.GenelBilgiDiv p, .GenelYardimDiv p, .GenelUyariDiv p { font:11px/30px arial; padding:0 5px; }
+.UrunListeGosterimTabloBaslikTr td { font-weight:bold; }
+.UrunListeGosterimTablo td { bordeR:1px solid #ddd; }
+.AlisverisSepetimSatinAlButon, .AlisverisSepetimAlisverisListemeEkleButon, .AlisverisSepetimUrunleriSilButon, .AlisverisSepetimGuncelleButon, .AlisverisSepetimSepetiBosaltButon, .AlisverisSepetimAlisveriseDevamButon, .AlisverisSepetimHizliSatinAlButon, .AlisverisSepetimSatinAlButon2, .GenelFormButon1, .GenelFormButon { background: none repeat scroll 0 0 #29a8dd; border: 1px solid #29a8dd; border-radius: 4px 4px 4px 4px; color: #FFFFFF; font-family: arial; font-size: 11px; font-weight: bold; height: 24px; margin: 5px; padding: 0 3px; cursor:pointer}
+.AlisverisSepetimAdetInput { width:30px; heighT:25px; font:11px/25px arial; text-align:center; margin-right:5px; bordeR:1px solid #ddd; }
+.GenelFormInput { width:200px; font:11px/25px arial; heighT:25px; padding:0 5px; border:1px solid #ccc; }
+textarea { heighT:100px; padding:0 5px; border:1px solid #ccc; font:11px/25px arial; width:auto; }
+.SiparisGizlilikDiv, .SiparisSozlesmeDiv { overflow-y:scroll; heighT:150px; border:1px solid #ddd; padding: 10px; }
+.SiparisGizlilikDiv td, .SiparisSozlesmeDiv td { padding:5px 0px !important; }
+.ZorunluAlanSpan { color:red; }
+.FormKrediKartTablo { width:100%; }
+.FormKrediKartTablo td { border-bottom:1px solid #ddd; }
+.FormKrediVadeBaslikTr td { font-weight:Bold; }
+.SepetimToplamTabloTaksitTutarDegerTd, .SepetimToplamTabloKazParaPuanDegerTd, .SepetimToplamTabloKdvDahilToplamDegerTd, .SepetimToplamTabloKargoUcretiDegerTd, .SepetimToplamTabloAraToplamDegerTd, .SepetimToplamTabloKdvToplamDegerTd, .SepetimToplamTabloIskontoDegerTd, .SepetimToplamTabloIskontoluDegerTd { text-align: left; }
+.SepetimToplamTabloKdvDahilToplamDegerTd { font-weight:bold; }
+.KategoriOrtaTabloUstTd { height: 30px; padding: 15px 0 0 9px;}
+.KategoriOrtaTabloUstTd a, .KategoriOrtaTabloUstTd p { color: #000; font: 11px/18px arial; text-decoration: none; }
+.KategoriOrtaTabloUstTd strong { font-weight: bold; }
+.KategoriOrtaTabloSayfalamaTd { height: 65px; }
+.KategoriOrtaTabloSayfalamaTablo a img { margin: 13px 3px 0; }
+.KategoriOrtaTabloSayfalamaSayfalarTd a, .KategoriOrtaTabloSayfalarText { color: #c5c5c5; display: block; float: left; font: bold 12px/20px arial; margin: 11px 0px; padding: 0 3px; text-decoration: none; }
+#hangisayfa, #hangisayfa2 { margin: 10px 5px 0 5px; }
+.GenelFormInput3 { margin: 0px 5px 0 5px; }
+.KategoriOrtaTabloSayfalamaSayfayaGit { margin-top: 12px; }
+.KategoriOrtaTabloSayfalamaTd img { floaT: left; margin: 6px 0 6px 3px; }
+.KategoriOrtaTabloKriterTd { height: 30px; }
+.KategoriOrtaTabloKriterTd a { font: bold 12px/30px arial; color: #333; text-decoration: none; float: left; margin-right: 10px; }
+.SiparisDuzenleDiv a, .MusteriHizmetleriIcerikTr a { color:green }
+.SayfayiKapatDiv a { font:bold 12px/30px arial; float:left; padding:10px; color:#000; }
+.SayfayiKapatDiv { float: left; width: 100%; }
+#urunBalonu { position:absolute; left:0; top:0; background:#fff; bordeR:1px solid #009BC9; display:none; margin-top:10px; z-index:99999}
+.balon_urunAdi {font:bold 11px/18px Arial; color:#666}
+.balon_urunBilgi {font:11px/18px Arial; color:#666}
+.balon_fiyat {font:bold 11px/18px Arial; color:#000}
+.OrtaAlanTabloSolTd, .KategoriOrtaAlanTabloSolTd, .UrunBilgisiOrtaAlanTabloSolTd, .YardimOrtaAlanTabloSolTd, .IcerikOrtaAlanTabloSolTd, .SepetOrtaAlanTabloSolTd, .SatinAlOrtaAlanTabloSolTd { width:215px; padding:0px; }
+.OrtaAlanTabloSagTd, .SatinAlOrtaAlanTabloSagTd, .SepetOrtaAlanTabloSagTd, .YardimOrtaAlanTabloSagTd, .IcerikOrtaAlanTabloSagTd, .UrunBilgisiOrtaAlanTabloSagTd, .KategoriOrtaAlanTabloSagTd { width:220px; background:url('/images/theme-image_34.jpg')top left no-repeat; padding:10px }
+.CollapsiblePanelTab { color: #666666; display: block; float: left; font: bold 15px/20px Arial; text-decoration: none; width:80%; margin:10px; }
+#CollapsiblePanel1 { widtH:100%; floaT:left; }
+#CollapsiblePanel1 ul, #CollapsiblePanel2 ul { margin:10px; }
+#CollapsiblePanel1 ul li {
+    width: 20%;  float: left;  border: 1px solid #D6D6D6;  margin: 0 10px 10px 0;
+ }
+#CollapsiblePanel1 ul li a {
+    font: 10px/18px Arial;  color: #666;  text-decoration: none;  margin: 5px 0 15px 10px;
+ }
+.KategoriUrunGosterimTd { padding-bottom:5px; }
+#ReklamAramaDiv{width:250px;position:absolute;display:none;z-index:1500;height:0px; top: 146px !important; right: 50%;margin-right: -559px;}
+.ReklamAramaKapatDiv{height:18px;float:left;cursor:pointer;padding:2px 5px 0 19px;background-image:url('/images/ReklamAramaKapat.gif');background-repeat:no-repeat;background-position:2px 2px;}
+.AramaSonuclariInput{font-family: Verdana,tahoma, Arial;font-size:10px;width:250px;background:#f5eee9;color:#5f4d44;border:solid 1px #b4a59b;position: relative;left: 0px;}
+#manset { text-align:center; }
+#zoom1 { margin:0 auto;}
+/*ÜRÜN BİLGİSİ TAB MENÜ*/
+.TabbedPanels { margin: 0px; padding: 0px; float: left; clear: none; width: 100%; }
+.TabbedPanelsTabGroup { margin: 0px; padding: 0px; }
+.TabbedPanelsTab { background: none repeat scroll 0 0 #28a8dd; color: #FFFFFF; cursor: pointer; float: left; font-family: arial; font-size: 14px; font-weight: bold; list-style: none outside none; padding: 9px 7px; position: relative;  }
+.TabbedPanelsTabGroup li:first-child {-moz-border-top-left-radius: 10px; -webkit-border-top-left-radius: 10px; border-top-left-radius: 10px 10px 10px 10px;}
+.TabbedPanelsTabGroup li:last-child {-moz-border-top-right-radius:: 10px; -webkit-border-top-right-radius: 10px; border-top-right-radius: 10px 10px 10px 10px;}
+.TabbedPanelsTab  img {display:none}
+.TabbedPanelsTabHover { color: #fff; }
+.TabbedPanelsTabSelected { background: none repeat scroll 0 0 #86d9fc; color: #fff; }
+.TabbedPanelsTab a { color: black; text-decoration: none; }
+.TabbedPanelsContentGroup { background-color: #FFFFFF; border: 1px solid #DDDDDD; clear: both; width: 500px; }
+.TabbedPanelsContent { padding: 4px;}
+.TabbedPanelsContentVisible { }
+.VTabbedPanels .TabbedPanelsTabGroup { float: left; width: 10em; height: 20em; background-color: #EEE; position: relative; border-top: solid 1px #999; border-right: solid 1px #999; border-left: solid 1px #CCC; border-bottom: solid 1px #CCC; }
+.VTabbedPanels .TabbedPanelsTab { float: none; margin: 0px; border-top: none; border-left: none; border-right: none; }
+.VTabbedPanels .TabbedPanelsTabSelected { background-color: #EEE; border-bottom: solid 1px #999; }
+.VTabbedPanels .TabbedPanelsContentGroup { clear: none; float: left; padding: 0px; width: 30em; height: 20em; }
+.backback {background:#000;left:0px;top:0px;position:absolute;}
+#PopUpAlertBackDiv {position: absolute;left:0;width: 100%;background-color: #000;cursor: pointer;z-index: 15;text-align:center;}
+#PopUpAlertDiv{   background-color: #FFFFFF; background-repeat: repeat-x; border: 4px solid #D7D6D6; color: #000000; font-family: Tahoma,Arial,Tahoma;  font-size: 11px; font-weight: normal; left: 50%;  margin: 80px 0 0 -350px; opacity: 100; padding: 0; position: fixed;   text-align: left; width: 700px; z-index: 253;}
+#PopUpAlertDiv h2{   background: none repeat scroll 0 0 #3D434E;border-bottom: 1px solid #3D434E; border-left: 2px solid #3D434E; color: #FFFFFF; font-family: Tahoma,Verdana,Arial; font-size: 13px; font-weight: bold; margin-top: 2px;padding: 6px 5px 5px 8px;}
+#PopUpAlertDivP{font-family: Tahoma, Arial, Tahoma;font-size: 11px;font-weight: normal;color: #6E6159;margin: 0;padding: 10px 0 0 0;}
+#PopUpAlertDiv a{text-decoration:underline;color: #FF8080;font-weight:bold;}
+#PopUpAlertDiv a:hover{color: #6E6159;}
+.SayfayiKapatDiv {float: right; margin: 0 3px; padding: 0 2px;}
+
+/* ===== [ HEADER ] ===== */
+.header { margin: 0 auto; width: 960px; z-index: 99999; background: url('/images/uygulama/ortaTop.jpg') no-repeat; background-color: #fff;margin-top:10px; float: left;}
+.header .logo { float: left; height: 73px; margin: 16px 0 0 10px; width: 215px;}
+.topBanner {float:left;margin-top: 15px;}
+.header .musteri { background: url("/images/uygulama/musteri.png") no-repeat scroll 0 0 transparent; float: left; height: 63px; width: 293px; margin-top: 15px; }
+.header .kargo { background: url("/images/uygulama/kargo.png") repeat scroll 0 0 transparent; float: left; height: 55px; left: 0; margin: 15px 10px 10px 20px; width: 252px; }
+.header .ustlink { float: right; height: 45px; left: 0; line-height: 40px; }
+.header .ustlink li { float: left; list-style: none outside none; font-size: 12px; }
+.header .ustlink li a { color: #949494; font-family: arial; font-size: 11px; padding: 0 5px; text-decoration: none; }
+.header .sepet { float: right; width: 185px; text-align: left; font: 16px/18px Arial; color: #a9a1a1; margin: 18px 0 0 15px; padding-top: 15px;}
+.header .sepet img{ float: left; margin-top: -15px;}
+.header .uyegirisi { float: right; height: 45px; margin: 7px 10px 0 0; width: 205px;}
+.header .uyegirisi li { float: left; }
+.header .uyegirisi ul { list-style: none; }
+.header .uyegirisi ul li a{ float: left; margin-right:10px; font:bold 12px/18px Arial; text-decoration:none; color:#666}
+.header .uyegirisi .uyegiris-mail { color: #9a9a9a; height: 16px; padding-left: 5px; width: 105px; float: left; margin-right: 3px; border: 1px solid #b7b7b7; font: 10px/18px Arial;}
+.header .uyegirisi .uyegiris-sifre { color: #676767; height: 16px; padding-left: 5px; width: 105px;  float: left; border: 1px solid #B7B7B7;  font: 10px/20px Arial; margin-right: 3px;}
+.uyegiris-buton {float:left}
+.header .uyegir { height: 23px; margin-bottom: 4px; width: 66px; float: right; }
+.header .uyegirisi p { color: #676767 !important; font-size: 12px !important; margin-top: 0; text-decoration: none !important; }
+.header .uyegirisi .girdi { color: #6C6D6F; float: right; font-family: tahoma; font-size: 12px; line-height: 20px; width: 300px; }
+.header .uyegirisi .girdi a { color: #6C6D6F !important; font-family: tahoma !important; font-size: 12px !important; font-weight: bold !important; text-decoration: none !important; }
+.header .uyegirisi span {    font: bold 10px/25px Arial; }
+.header .uyegirisi p a { color: #676767 !important; font-size: 12px !important; text-decoration: none !important; }
+.header .menu { background: url("/images/uygulama/menubg1.jpg") repeat-x scroll 0 0 #8DC63F; border-radius: 10px 10px 10px 10px; float: left; height: 48px; margin: 10px auto 0; width: 960px; }
+.yazi { color: #5cbc51; padding-top: 3px;} .yazi a{font: 14px/18px Arial; color: #5cbc51; text-decoration:none;}
+.yazi input { margin: -15px 0 0 150px; width:18px; display:block;} 
+.yazi span{ margin: -15px 0 0 170px; display:block; float: left; line-height: 18px !important;} 
+.sakla{display:none}
+
+.logo{background:yellow}
+.flash{margin: 5px 5px -125px 55px; padding-top: 5px;text-align: center;float: left}
+
+#banner {z-index: 438;float: left;width: 729px !important;height: 250px !important;position: relative;margin-top: 12px;}
+.scrollable {float: left;height: 197px;overflow: hidden;position: relative;width: 729px;}
+#banner .scrollable .items  {clear: both;position: absolute;width: 20000em;}
+#banner .items div {float: left;text-align: center;}
+#banner .scrollable img  {margin: 0pt auto;height: 197px;width: 729px;}
+#banner .scrollable .active  {cursor: default;position: relative;}
+#banner a.browse1 { background: url("/images/uygulama/banner/controls.png") no-repeat scroll 0 0 transparent;cursor: pointer; display: block; height: 93px; width: 40px; z-index: 13;}
+#banner a.left1 { margin: 72px 0 0 0; padding: 0; position: absolute; left: 10px;}
+#banner a.right1 { background: url("/images/uygulama/banner/controls2.png") no-repeat scroll 0 0px transparent; margin: 72px 0px 0 0; padding: 0; position: absolute; right: 10px;}
+#banner .detay a {color: #FFFFFF;font-family: arial;font-size: 18px;font-weight: bold; margin: 0pt; padding: 0pt;text-decoration: none;}
+/* ===== [ MAIN ] ===== */
+#main { width:747px; text-align:left; margin:0 auto; position:relative; float:right;z-index:1; }
+
+/* ===== [ FOOTER ] ===== */
+#footer { width:980px; text-align:left; margin:0 auto; position:relative; }
+#altalan { height: 160px; left: 0; margin: 5px auto 0; position: relative; width: 950px; background: url('/images/uygulama/footerBg.jpg') repeat-x; background-color: #fff; padding: 25px 5px 0 5px;}
+.altmenu { float: left; height: 70px; left: 0; text-align: left; width: 505px; }
+.altmenu ul { float: left; height: 90px; list-style: none outside none; margin: 0; padding: 0; width: 125px; }
+.altmenu ul li { color: #0e84b6; font-family: arial; font-size: 12px; font-weight: bold; height: 20px; line-height: 20px; }
+.altmenu .kategoriadi { margin-bottom: 5px; }
+.altmenu ul li a { font-size: 10px; font-weight: normal; color: #231f20; text-decoration: none; }
+.bankalar { background: url("../uygulama/bankalar.jpg") no-repeat scroll 0 0 transparent; height: 38px; left: 0; margin: 10px 0; width: 556px; text-align:left; float: left;}
+.addthis_toolbox { }
+.bilginet {margin-top:20px}
+.sosyal { height: 97px; position: absolute; width: 100px; text-align: center; }
+.sosyal2 { float: left; height: 48px; width: 140px; margin-left: 64px;}
+.kartlar {float:left; margin-left:30px}
+.ebultenana { float: left; height: 90px; width: 240px; }
+.ebultenana h3 { font-size: 10px; font-weight: bold; }
+.altLogoo {height:49px}
+.ebultenana input[type="text"] { color: #B7B7B7; font-size: 10px; height: 29px; line-height: 29px; padding-left: 10px; width: 155px; float: left; background: url(/images/uygulama/etextbox.jpg) no-repeat; border: none; margin: 0 !important;}
+.ebultenana .listeform { background: none repeat scroll 0 0 #FFFFFF; border: 1px solid #D7D7D7; color: #B7B7B7; font-size: 10px; height: 25px; line-height: 25px; margin-top: 5px; width: 170px; }
+.ebultenana .listebuton { float: left;}
+
+/* ========== [ CATEGORY START ] ========== */
+.products { border:1px solid #666;  height: 350px; margin: 15px 0; position: relative; text-align: center; width: 225px; float: left;}
+.products:hover {border: 1px solid #0099FF;}
+.product_image {margin-top:10px;background: #f4f4f4;height: 110px;}
+.UrunSablonUrunAdiText {height:35px;padding-top:5px}
+.UrunSablonUrunAdiLink {font: 11px/13px Arial; color: #2e3335; text-decoration:none;}
+.UrunSablonBizdeFiyatiIndirimliDeger{font:bold 14px/18px Arial; color:#848181; text-decoration: line-through;}
+.UrunSablonBizdeKelimesi, .piyasaProduct,.UrunSablonIndirimliFiyatKelimesi, .UrunSablonPiyasadaKelimesi {font:bold 11px/18px Arial; color:#848181}
+
+.UrunSablonIndirimliFiyatiDeger, .BizdePiyasadaFarkli{font: bold 17px/22px Arial; color: #2e3335;}
+.UrunSablonBizdeFiyatiDeger, .UrunSablonPiyasaFiyatiDeger {font: bold 17px/22px Arial; color: #2e3335;}
+.yeni {position: absolute;margin: 0;}
+.indirim {position: absolute; left: 175px;}
+.kargo {position: absolute; left: 52px;top: 157px;}
+.HaberlerModulKayanDivTarih {font:11px/18px Arial; color:#d4b63c; }
+.HaberlerModulListeLink {border-bottom:1px dashed #dcdbdd; margin-bottom:10px;line-height: 15px !important;}
+.HaberlerModulListeTd{background-color:#fefdff;  padding: 0px 5px 5px 5px !important;}
+.HaberlerModulListeTd img{display:none}
+.HaberlerModulListeTr {width: 196px !important;}
+.HaberlerModulKayanDiv img {display:none}
+/* ========== [ DETAILS START ] ========== */
+.detaySol { width: 430px; float:left; margin-left: 10px;}
+.UrunBilgisiResimAlanDiv {margin-bottom:25px}
+.detaySag {width:500px; float:left}
+.UrunBilgisiUrunDigerTable, .UrunListeGosterimTablo {width: 949px !important;float: left;}
+.UrunListeGosterimTabloBaslikTr {background-color: #506998;height:25px; color:#fff}
+.UrunListeGosterimTabloListeTr2 {background-color: #eee;height:25px;}
+.UrunListeGosterimTabloListeTr1 {background-color: #fff;height:25px;}
+.UrunBilgisiUrunDigerDiv{width: 949px !important;float: left;margin-top: 25px;}
+.UrunBilgisiDigerUrunlerBaslikDiv {  float: left; font-family: arial;   font-size: 14px; font-weight: bold;     background: url('/images/uygulama/diger.gif') no-repeat;  height: 26px;  width: 266px;  text-align: left;  padding: 5px 0 0 15px;  color: #fff200;}
+.UrunKucukResim {float:left; margin-right:5px; border:1px solid #e5e5e5; padding:3px;width:60px;cursor: pointer;}
+#UrunBilgisiMinumumTaksitTutariDiv {margin:25px 0; padding:5px 20px; background-color:#ccc}
+.alticon {margin-top:15px}
+.ayrinti {float:left; }
+.ayrinti p{margin:0; padding:0; float: left !important;}
+.UrunBilgisiUrunAdi {font: bold 17px/25px Arial; color: #000;padding: 10px 0;}
+.noktalama #UrunBilgisiPiyasadaBaslikDiv, .noktalama #UrunBilgisiPiyasaBizdeKazancBaslikDiv {font:bold 12px/18px Arial; display: block;width: 144px;margin-right: 10px; background: url('/images/uygulama/nokta.jpg') no-repeat right; }
+
+.noktalama span {font:bold 12px/18px Arial; float:left;display: block;width: 144px;margin-right: 10px;background: url('/images/uygulama/nokta.jpg') no-repeat right;}
+#UrunBilgisiIndirimsizFiyatiDiv1 {float:left; text-decoration: line-through;}
+#UrunBilgisiIndirimliFiyatiDiv {float:left; }
+#UrunBilgisiIndirimliFiyatiBaslikDiv, #UrunBilgisiHavaleIndirimliFiyatiBaslikDiv {background:url('/images/uygulama/nokta.jpg') no-repeat right;width: 145px;  font: bold 12px/18px Arial;margin: 0;padding: 0;margin-right: 10px;}
+#UrunBilgisiStokDurumuBaslikDiv {background: url('/images/uygulama/nokta.jpg') no-repeat right;width: 145px;font: bold 12px/18px Arial;margin: 0;padding: 0;margin-right: 10px;}
+#UrunBilgisiUrunAdetKutusuDiv { margin: 30px 15px 0 0; float: left; font: bold 12px/25px Arial;}
+.UrunBilgisiUrunMiktarInput {width: 20px; height: 25px;text-align:center; font:bold 12px/18px Arial; }
+#UrunBilgisiSatinAlButonDiv {float:left; width: 146px;margin-top: 15px;}
+#UrunBilgisiSepeteAtButonDiv {float:left; width: 150px;margin-top: 15px;}
+.bilgilendirme {float:left;width: 240px;}
+.UrunBilgisiUrunTabDiv {width: 515px;float:left;margin-left: -5px;margin-top: 15px;}
+#gizlilik_onayla{position: relative !important;}
+
+/* ========== [ DISPLAY START ] ========== */
+.SiteAltTabloImzaTd,  SiteAltTabloAltBilgiTd, .OzellikMenuOrta, .GenelFormBaslikTd, .UrunBilgisiUrunAdiKucukText {display:none}
+#markalar {
+    margin-bottom: 0px;
+    float: left;
+}
+#ust_markalar {
+    padding: 0 10px 0 0px;
+    float: left;
+}
+#ust_marka {
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    float: left;
+    height: 18px;
+    margin-bottom: 3px;
+    margin-left:-1px;
+    margin-right: 2px;
+    padding: 2px;
+    width: 65.5px;
+}
+
+#ust_marka img {
+    width: 66.5px;
+}
+.allinone_contentSlider.common .bottomNavButtonOFF {
+    background: url("skins/bottomNavOFF.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 30px;
+    padding-left: 2px;
+    width: 33px;
+}
+.allinone_contentSlider.common .bottomNavLeft {
+    background: none repeat scroll 0 0 #FF0000;
+    bottom: 5px;
+    display: none;
+    height: 24px;
+    position: absolute;
+    width: 0;
+    z-index: 3;
+}
+.allinone_contentSlider.common .bannerControls {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+allinone_contentSlider.common .leftNav {
+    background: url("skins/leftNavOFF.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 150px;
+    left: -35px;
+    position: absolute;
+    width: 60px;
+}
+.cartProduct{padding:10px 0;}

@@ -1,0 +1,16 @@
+{% extends "socialapp/base.html" %}
+{% block content %}
+    <ul id="looks_list">
+    {% for look in look_list %}
+        <li>
+        <a href="/profile/{{ look.looker_user.pk }}">
+        {% if look.highlight %}
+            <strong>{{ look.looker_user.get_full_name }}</strong>
+        {% else %}
+            {{ look.looker_user.get_full_name }}
+        {% endif %}
+        </a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock content %}

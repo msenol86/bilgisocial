@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="w_zJxZJ_dQATLLXZe7Sk5ftDa3JiXhm5gUQWsoLE8yg" />
+    <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="{{ STATIC_URL }}css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <link href='http://fonts.googleapis.com/css?family=Niconne|Molle:400italic|Satisfy|Damion|Courgette|Kaushan+Script'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ STATIC_URL }}style.css" type="text/css"/>
+    <script src="{{ STATIC_URL }}js/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap.js"></script>
+    <title>{% block title %}BilgiSocial Beta{% endblock %}</title>
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+    </style>
+    <script>
+        (function ($) {
+
+            var proto = $.ui.autocomplete.prototype,
+                    initSource = proto._initSource;
+
+            function filter(array, term) {
+                var matcher = new RegExp($.ui.autocomplete.escapeRegex(term), "i");
+                return $.grep(array, function (value) {
+                    return matcher.test($("<div>").html(value.label || value.value || value).text());
+                });
+            }
+
+            $.extend(proto, {
+                _initSource: function () {
+                    if (this.options.html && $.isArray(this.options.source)) {
+                        this.source = function (request, response) {
+                            response(filter(this.options.source, request.term));
+                        };
+                    } else {
+                        initSource.call(this);
+                    }
+                },
+
+                _renderItem: function (ul, item) {
+                    return $("<li></li>")
+                            .data("item.autocomplete", item)
+                            .append($("<a></a>")[ this.options.html ? "html" : "text" ](item.label))
+                            .appendTo(ul);
+                }
+            });
+
+        })(jQuery);
+
+
+        function search_text(text) {
+            console.log(text)
+            $.ajax({
+                url: "../search/?search_text=" + text
+            }).done(function (data) {
+                        console.log(data)
+                        var found_users = data.map(function (item) {
+                            return {label: item.full_name, id: item.id, image: item.picture }
+                        })
+                        $("#search_text").autocomplete({
+                            minLength: 0,
+                            source: found_users,
+                            select: function (event, ui) {
+                                //console.log(ui.item.value);
+                                window.location.href = '/profile/' + ui.item.id;
+                            }
+                        }).data("ui-autocomplete")._renderItem = function (ul, item) {
+                            return $("<li>")
+                                    .append('<a><img class="img-circle" style="width:32px;" src="{{ MEDIA_URL }}'+ item.image +'">' + item.label + '</a>').appendTo(ul);
+                        };
+                    })
+        }
+
+    </script>
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        {% block top_menu %}
+            <div class="navbar-header">
+                <a class="navbar-brand" style="font-family: 'Courgette', cursive; font-size: 26px;" href="/">Bilgi
+                    Social
+                    <small>Beta</small>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse ">
+                <ul class="nav navbar-nav">
+                    <li><a href="/messages/"><b>Mesajlar{% if notifications.message_count > 0 %}
+                        <span class="badge">{{ notifications.message_count }}</span>{% endif %}</b></a></li>
+                    <li><a href="/looks/"><b>Göz Kırpmalar{% if notifications.look_count > 0 %}
+                        <span class="badge">{{ notifications.look_count }}</span>{% endif %}</b></a></li>
+                    <li><a href="/friends/"><b>Listeler</b></a></li>
+
+
+                    <li>
+
+
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Ara" name="search_text"
+                                       id="search_text" autocomplete="off">
+                            </div>
+
+                        </form>
+
+
+                        <script>$('#search_text')[0].onkeypress = function () {
+                            search_text($('#search_text')[0].value)
+                        }</script>
+
+
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">{% if logged_in %}
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ request.user.get_full_name }} <b
+                                class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/profile/">Profilim</a></li>
+                            <li><a href="/new_password/0">Parola Değiştir</a></li>
+                            <li><a href="/edit_user_profile/">Düzenle</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/logout/"><i class="i"></i>Oturumu kapat</a></li>
+                        </ul>
+                    {% else %}
+                        <div class="btn btn-default-group">
+                            <a class="btn btn-default btn btn-default-primary" href="/login?next{{ request.past }}/"><i
+                                    class="glyphicon glyphicon-user glyphicon-white"></i> Oturum aç</a>
+                        </div>
+                    {% endif %}
+                    </li>
+                </ul>
+            </div>
+        {% endblock %}
+
+    </div>
+</div>
+<br/>
+
+
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+<div id="feedback"><a href="/feedback/?next={{ request.path }}">Geri bildirim</a></div>
+
+</body>
+</html>

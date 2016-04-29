@@ -1,0 +1,22 @@
+{% extends "socialapp/base.html" %}
+{% block content %}
+    {% if users %}
+        <ul class="media-list">
+            {% for u in users %}
+                <li class="media">
+                    <a class="pull-left" href="/profile/{{ u.pk }}">
+                        <img class="media-object" src="{{ MEDIA_URL }}{{ u.picture }}" height="50px">
+                    </a>
+
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="/profile/{{ u.pk }}">{{ u.user.get_full_name }}</a></h4>
+                        {{ u.department }}
+                    </div>
+
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        Sonuç bulunamadı
+    {% endif %}
+{% endblock %}

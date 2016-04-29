@@ -1,0 +1,26 @@
+{% extends "socialapp/base.html" %}
+{% block content %}
+    <ul id="conversations_list">
+    {% for conversation in conversation_list %}
+        <li>
+        {% if conversation.user1 == user  %}
+            {% if  conversation.is_new_for_user1 %}
+                <b><a href="/messages/{{ conversation.pk }}">
+                    {{ conversation.user2.get_full_name }} - {{ conversation.update_time }}</a></b>
+            {% else %}
+                <a href="/messages/{{ conversation.pk }}">
+                    {{ conversation.user2.get_full_name}} - {{ conversation.update_time }}</a>
+            {% endif %}
+        {% else %}
+            {% if  conversation.is_new_for_user2 %}
+                <b><a href="/messages/{{ conversation.pk }}">
+                    {{ conversation.user1.get_full_name }} - {{ conversation.update_time }}</a></b>
+            {% else %}
+                <a href="/messages/{{ conversation.pk }}">
+                    {{ conversation.user1.get_full_name}} - {{ conversation.update_time }}</a>
+            {% endif %}
+        {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock content %}
