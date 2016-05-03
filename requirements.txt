@@ -1,0 +1,5 @@
+captcha==0.2.1
+Django==1.4.22
+gunicorn==19.4.5
+Pillow==3.2.0
+South==1.0.2
